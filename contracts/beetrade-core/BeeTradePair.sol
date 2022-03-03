@@ -141,6 +141,7 @@ contract BeeTradePair is IBeeTradePair, BeeTradeERC20 {
 
         bool feeOn = _mintFee(_reserve0, _reserve1);
         uint _totalSupply = totalSupply; // gas savings, must be defined here since totalSupply can update in _mintFee
+        require(_totalSupply != 0, "The value of totalSupply must not be 0");
         amount0 = liquidity.mul(balance0) / _totalSupply; // using balances ensures pro-rata distribution
         amount1 = liquidity.mul(balance1) / _totalSupply; // using balances ensures pro-rata distribution
         require(amount0 > 0 && amount1 > 0, 'BeeTrade: INSUFFICIENT_LIQUIDITY_BURNED');
