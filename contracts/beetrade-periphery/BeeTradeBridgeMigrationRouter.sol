@@ -144,7 +144,7 @@ contract BeeTradeBridgeMigrationRouter {
      */
     function _arePairsCompatible(address pairA, address pairB) internal view {
         require(pairA != address(0), "BeeTradeBridgeMigrationRouter: liquidityPairFrom address 0");
-        require(pairA != address(0), "BeeTradeBridgeMigrationRouter: liquidityPairTo address 0");
+        require(pairB != address(0), "BeeTradeBridgeMigrationRouter: liquidityPairTo address 0");
         require(pairA != pairB, "BeeTradeBridgeMigrationRouter: Cant convert to the same liquidity pairs");
         require(
             IBeeTradePair(pairA).token0() == IBeeTradePair(pairB).token0() ||
