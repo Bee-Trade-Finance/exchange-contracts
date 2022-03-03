@@ -339,6 +339,7 @@ contract BeeTradeBridgeMigrationRouter {
     ) external view returns (uint amount0, uint amount1) {
         require(liquidityPairFrom != address(0), "BeeTradeBridgeMigrationRouter: liquidityPairFrom address 0 not supported");
         require(liquidityPairTo != address(0), "BeeTradeBridgeMigrationRouter: liquidityPairTo address 0 not supported");
+        _arePairsCompatible(liquidityPairFrom, liquidityPairTo);
         (uint amountIn0, uint amountIn1) = _calculateRescueLiquidity(liquidityPairFrom, amount);
         if (IBeeTradePair(liquidityPairFrom).token0() != IBeeTradePair(liquidityPairTo).token0() &&
             IBeeTradePair(liquidityPairFrom).token1() != IBeeTradePair(liquidityPairTo).token1()
