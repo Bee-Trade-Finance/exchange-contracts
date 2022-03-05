@@ -112,6 +112,7 @@ contract BeeTradeBridgeMigrationRouter {
         if (quote1 > amountIn1) {
             quote1 = amountIn1;
             quote0 = BeeTradeLibrary.quote(amountIn1, reserve1, reserve0);
+            require(amountIn0 >= quote0, 'BeeTradeBridgeMigrationRouter: INSUFFICIENT AMOUNT_0');
         }
         TransferHelper.safeTransfer(token0, pairToken, quote0);
         TransferHelper.safeTransfer(token1, pairToken, quote1);
@@ -352,6 +353,7 @@ contract BeeTradeBridgeMigrationRouter {
         if (quote1 > amountIn1) {
             quote1 = amountIn1;
             quote0 = BeeTradeLibrary.quote(amountIn1, reserve1, reserve0);
+            require(amountIn0 >= quote0, 'BeeTradeBridgeMigrationRouter: INSUFFICIENT AMOUNT_0');
         }
         amount0 = amountIn0 - quote0;
         amount1 = amountIn1 - quote1;
