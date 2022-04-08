@@ -1,12 +1,10 @@
 # Beetrade Smart Contracts
-This repo contains some of the smart contracts used to run [BeeTrade](app.beetrade.finance).
+This repo contains some of the smart contracts used to run [BeeTrade](beetrade.exchange).
 
 ## Deployed Contracts
-Factory address: `NOT YET DEPLOYED`
+Factory address: `0xF82F6Ac2527e4Eb1eBb9e9726Ceed27Aa4BDdd2e`
 
-Router address: `NOT YET DEPLOYED`
-
-Migrator address: `NOT YET DEPLOYED`
+Router address: `0x1A4982d2F32115c4414a0F11ac38bCD70A50510c`
 
 ## Running
 These contracts are compiled and deployed using [Hardhat](https://hardhat.org/). They can also be run using the Remix IDE. A tutorial for using Remix is located [here](https://docs.avax.network/build/tutorials/platform/deploy-a-smart-contract-on-avalanche-using-remix-and-metamask).
