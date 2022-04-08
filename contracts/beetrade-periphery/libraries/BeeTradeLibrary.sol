@@ -22,7 +22,7 @@ library BeeTradeLibrary {
                 hex'ff',
                 factory,
                 keccak256(abi.encodePacked(token0, token1)),
-                hex'40231f6b438bce0797c9ada29b718a87ea0a5cea3fe9a771abdd76bd41a3e545' // init code hash
+                hex'a24aa3b082cf9839b1d4c5e8df9cb3f3009ad685a1220fd3566c23df3eaafbc5' // init code hash
             ))));
     }
 
